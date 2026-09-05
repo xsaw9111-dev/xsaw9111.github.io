@@ -1,10 +1,267 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<he<link rel="stylesheet" href="style.css">ad>
+<head>
     <meta charset="UTF-8">
-    <title>متجري التجريبي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو كافيه Spill & Chill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --card-bg: #181b22;
+            --accent-color: #d4a373;
+            --accent-hover: #faedcd;
+            --text-main: #fefae0;
+            --text-muted: #a0a5b1;
+            --border-color: rgba(212, 163, 115, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 40px 15px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .category-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-hover);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.07);
+        }
+
+        .item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .item-info {
+            max-width: 75%;
+        }
+
+        .item-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .item-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            white-space: nowrap;
+        }
+
+        .currency {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-right: 2px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .instagram-link:hover {
+            color: var(--accent-hover);
+        }
+    </style>
 </head>
 <body>
-    <h1>الموقع يعمل بنجاح!</h1>
+
+    <div class="container">
+        <!-- ترويسة الكافيه -->
+        <header>
+            <h1 class="logo-title">Spill & Chill</h1>
+            <p class="tagline">قهوة متقنة ولحظات هادئة تروق لك</p>
+        </header>
+
+        <!-- قسم القهوة المختصة والساخنة -->
+        <div class="category-section">
+            <h2 class="category-title">☕ القهوة المختصة والساخنة</h2>
+            <div class="item-list">
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">إسبريسو (Espresso)</div>
+                        <div class="item-desc">شوت مركز غني بالنكهات وإيحاءات متوازنة</div>
+                    </div>
+                    <div class="item-price">12 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">فلات وايت (Flat White)</div>
+                        <div class="item-desc">توازن مثالي بين دبل شوت إسبريسو والحليب المبخر بنعومة</div>
+                    </div>
+                    <div class="item-price">16 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">كورتادو (Cortado)</div>
+                        <div class="item-desc">كميات متساوية من الإسبريسو والحليب المخفوق</div>
+                    </div>
+                    <div class="item-price">14 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">قهوة مقطرة V60</div>
+                        <div class="item-desc">تحضير يدوي دقيق بمحاصيل مختارة تبرز صفاوة النكهة</div>
+                    </div>
+                    <div class="item-price">18 <span class="currency">ر.س</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم المشروبات الباردة والمنعشة -->
+        <div class="category-section">
+            <h2 class="category-title">🧊 المشروبات الباردة</h2>
+            <div class="item-list">
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">كولد برو (Cold Brew)</div>
+                        <div class="item-desc">منقوعة ببطء لمدة 18 ساعة لقوام سلس ونكهة نقية</div>
+                    </div>
+                    <div class="item-price">20 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">آيس سبانش لاتيه (Iced Spanish Latte)</div>
+                        <div class="item-desc">مزيج القهوة الغنية مع الحليب ونكهة الحلاوة المميزة</div>
+                    </div>
+                    <div class="item-price">20 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">آيس ماتشا لاتيه (Iced Matcha Latte)</div>
+                        <div class="item-desc">ماتشا يابانية فاخرة مع الحليب البارد والثلج</div>
+                    </div>
+                    <div class="item-price">22 <span class="currency">ر.س</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم الحلى والوجبات الخفيفة -->
+        <div class="category-section">
+            <h2 class="category-title">🥐 الحلى والمخبوزات</h2>
+            <div class="item-list">
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">كوكيز كلاسيك بالشوكولاتة</div>
+                        <div class="item-desc">طري من الداخل ومقرمش من الأطراف مع قطع شوكولاتة بلجيكية</div>
+                    </div>
+                    <div class="item-price">12 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">فرينش توست كراميل</div>
+                        <div class="item-desc">بريوش محمص بصلصة التوفي والكراميل المملح</div>
+                    </div>
+                    <div class="item-price">26 <span class="currency">ر.س</span></div>
+                </div>
+
+                <div class="item">
+                    <div class="item-info">
+                        <div class="item-name">كرواسون زبدة طازج</div>
+                        <div class="item-desc">مخبوز يومياً بطبقات هشة وخفيفة</div>
+                    </div>
+                    <div class="item-price">14 <span class="currency">ر.س</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل والتواصل -->
+        <footer>
+            <p>جميع الأسعار تشمل ضريبة القيمة المضافة 15%</p>
+            <a href="#" class="instagram-link">تابعنا على إنستغرام @spillandchill</a>
+        </footer>
+    </div>
+
 </body>
 </html>
